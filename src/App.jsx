@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import Loading from "./components/Loading";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
@@ -11,16 +9,6 @@ import Footer from "./components/Footer";
 import Themes from "./components/Themes";
 
 function App() {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    window.addEventListener("load", () => {
-      setLoading(false);
-    });
-  }, []);
-
-  if (loading) {
-    return <Loading />;
-  }
   return (
     <BrowserRouter basename="/myPortfolio">
       <NavBar />
