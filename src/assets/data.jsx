@@ -252,6 +252,36 @@ export const Technologies = [
 
 export const portfolio = [
   {
+    id: 0,
+    title: "Frontend department of blog",
+    details: {
+      technologies: [
+        "context api",
+        "react hooks",
+        "react-cookies",
+        "react-router-dom",
+        "react-quill",
+        "react-hook-form",
+      ],
+      // eslint-disable-next-line react/jsx-key
+      icons: [<FaReact className="react" />],
+      viewProject: "https://github.com/Jalal-Aljhny/AJY-blog",
+      viewCode: "https://github.com/Jalal-Aljhny/AJY-blog",
+      userStory: `
+  <li>Authentication and Autherization with JWT(json web token) .</li>
+ <li>Strong validation before send request to API in all form using react-hook-form .</li>
+ <li>Protected routes  depending on (Roles , Registeration) using react-router-dom .</li>
+  <li>Using Intersection Observer to load next pagination data when scroll.</li>
+  <li> Unregistered users can read first 50 word of post only .</li>
+  
+   <li> role1 : user ,no permissions .</li>
+   <li> role2: Admin ,permissions: (Add Post , Edit Post , Delete Post ) .</li>
+   <li> role3 : Super Admin ,permissions: (Add Post , Edit Post , Delete Post ,Edit Users , Delete Users ) .</li>
+  <li>Save needed previos routes in session so :(when register from post page return to same post page ,when delete or update from home route or posts route return to same route. )</li>
+      `,
+    },
+  },
+  {
     id: 1,
     title: "Translate app",
     details: {
