@@ -1,0 +1,126 @@
+.potfolio__contaniner {
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  justify-items: center;
+  padding-inline: 15px;
+}
+@media (max-width: 576px) {
+  .potfolio__contaniner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.portfolio__item {
+  background-color: var(--first-color);
+  padding: 25px;
+  border-radius: 15px;
+  min-width: 500px;
+  position: relative;
+  transition-duration: 1s;
+  transform: scale(0.5) rotate(-5deg);
+  opacity: 0;
+}
+:global(.portfolio__item__show) {
+  opacity: 0.99;
+  transform: scale(1) rotate(0);
+}
+.features {
+  list-style: disc;
+  padding-left: 15px;
+  max-width: 450px;
+  color: var(--text-white);
+  font-size: var(--font-small);
+}
+@media (max-width: 576px) {
+  .portfolio__item {
+    padding: 15px;
+    min-width: 300px;
+    width: 100%;
+  }
+  .features {
+    font-size: var(--font-tiny);
+  }
+}
+.features li {
+  margin-block: 7.5px;
+}
+.portfolio__item p {
+  font-weight: var(--font-700);
+  color: var(--text-white);
+  font-family: var(--secound-font);
+  margin-block: 20px;
+}
+.portfolio__item h3 {
+  text-align: center;
+  color: var(--text-white);
+  font-weight: var(--font-600);
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+.technologies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  color: var(--text-white);
+  font-size: var(--font-small);
+  margin-bottom: 30px;
+  padding-left: 15px;
+  font-weight: var(--font-600);
+  font-style: italic;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-block: 30px;
+  padding-block: 10px;
+}
+@media (max-width: 767px) {
+  .icons {
+    padding-block: 30px;
+  }
+}
+.icons li {
+  transform: scale(1.6);
+}
+.links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  margin-bottom: 20px;
+}
+.portfolio__item a {
+  width: 40%;
+  display: inline-block;
+  background-color: var(--container-color);
+  padding: 5px 7.5px;
+  color: var(--dark-title-color);
+  border-radius: 25px;
+  text-align: center;
+  transition-duration: 0.3s;
+  font-weight: var(--font-600);
+  font-size: var(--font-small);
+  position: relative;
+}
+.portfolio__item a:hover {
+  color: var(--container-color);
+  background-color: var(--dark-title-color);
+}
+a:global(.btn) {
+  margin-block: 50px;
+  margin-inline: auto;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: var(--font-small);
+  font-weight: var(--font-500);
+}
+@media (max-width: 576px) {
+  a:global(.btn) {
+    font-size: var(--font-tiny);
+  }
+}
